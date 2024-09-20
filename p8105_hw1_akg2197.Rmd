@@ -10,3 +10,32 @@ library(tidyverse)
 data("penguins", package = "palmerpenguins")
 view(penguins)
 ```
+
+
+Thus dataset includes variables species ("species"), island ("island"), bill
+length in mm ("bill_length_mm")
+
+The data in this dataset, including names / values of important variables
+The rows of the dataset are `r nrow(penguins)` 
+The columns of the dataset are `r ncol(penguins)`
+The mean flipper length is `r mean(pull(penguins, flipper_length_mm), na.rm = TRUE)`
+
+```{r ggplot, include=FALSE}
+ggplot(weather_df, aes(x = tmin, y = tmax)) + 
+  geom_point(aes(color = name))
+
+# Problem 2
+la_df = tibble(
+  norm_samp = rnorm(10),
+  norm_samp_pos = norm_samp > 0,
+  b_vec = c("Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"),
+  level = factor(c("low","low","low", "medium","medium","medium","medium", "high","high","high"))
+)
+
+mean(pull(la_df, norm_samp))
+mean(pull(la_df, norm_samp_pos))
+mean(pull(la_df, b_vec))
+mean(pull(la_df, level))
+```
+We have an error in pulling the level variable and taking the mean of a character because 
+it is non-numeric.
