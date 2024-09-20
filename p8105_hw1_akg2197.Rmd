@@ -1,0 +1,12 @@
+---
+title: "p8105_hw1_akg2197"
+author: "Annie Gorman"
+date: "2024-09-20"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+data("penguins", package = "palmerpenguins")
+view(penguins)
+```
