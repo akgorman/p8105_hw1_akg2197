@@ -11,7 +11,7 @@ data("penguins", package = "palmerpenguins")
 view(penguins)
 ```
 
-#Problem 1
+# Problem 1
 This dataset includes variables species ("species"), island ("island"), bill
 length in mm ("bill_length_mm"), bill depth in mm ("bill_depth_mm"), flipper length in mm
 ("flipper_length_mm"), body mass in grams ("body_mass_g"), sex, and year. 
@@ -20,7 +20,7 @@ The rows of the dataset are `r nrow(penguins)`
 The columns of the dataset are `r ncol(penguins)`
 The mean flipper length is `r mean(pull(penguins, flipper_length_mm), na.rm = TRUE)`
 
-#Scatterplot of bill length vs. flipper length
+# Scatterplot of bill length vs. flipper length
 ```{r}
 scatterplot <- ggplot(penguins, aes(
   x = bill_length_mm, 
